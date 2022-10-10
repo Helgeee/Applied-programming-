@@ -1,0 +1,55 @@
+﻿<Window x:Class="Practicum4_tadk1.Files"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practicum4_tadk1"
+        mc:Ignorable="d"
+        Title="Files" 
+        Height="450" 
+        Width="800">
+    <Grid Name="parent" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Row="0" Margin="20,0,20,0">
+            <Border Background="GhostWhite" 
+                    BorderBrush="Gainsboro" 
+                    BorderThickness="0,0,0,1">
+                <Menu Height="Auto" 
+                  VerticalAlignment="Center" 
+                  Background="White">
+                    <MenuItem Header="Файл" Name="openFile" Click="MenuItem_Click"/>
+                    <MenuItem Header="Программы">
+                        <MenuItem Name="averege" Header="Расчет среднего арифметического" Click="MenuItem_Click" ></MenuItem>
+                        <MenuItem Name="sqrt" Header="Решение квадратного управления" Click="MenuItem_Click" ></MenuItem>
+                        <MenuItem Name="list" Header="Работа со списками" Click="MenuItem_Click" ></MenuItem>
+                        <MenuItem Name="files" Header="Работа с файлами" Click="MenuItem_Click" ></MenuItem>
+                        <Separator />
+                        <MenuItem Name="exit" Header="Выход" Click="MenuItem_Click" ></MenuItem>
+                    </MenuItem>
+                </Menu>
+            </Border>
+        </Grid>
+        <Grid Row="1">            
+            <DocumentViewer
+                Name="reader"/>
+
+        </Grid>
+        <!--Grid Grid.Row="2">
+            <StackPanel 
+                Grid.Row="0"
+                Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button 
+                    Width="150"
+                    Height="36"
+                    Content="Выполнить" 
+                    VerticalAlignment="Center" Click="Button_Click" 
+                    />
+            </StackPanel>
+        </Grid-->
+
+    </Grid>
+</Window>

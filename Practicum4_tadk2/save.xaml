@@ -1,0 +1,40 @@
+﻿<Window x:Class="Practicum4_tadk2.save"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Practicum4_tadk2"
+    mc:Ignorable="d"
+    Title="Загрузка" Height="450" Width="800">
+    <Grid>
+        <StackPanel 
+            Grid.Row="0"
+            Orientation="Horizontal" 
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Stretch">
+            <Label 
+                Content="Выберите файл" 
+                VerticalAlignment="Center" 
+                FontWeight="Bold" 
+                Margin="0,0,10,0"/>
+            <TextBox 
+                TextWrapping="NoWrap"
+                Name="txt_filename"
+                Text="" 
+                Width="250"
+                Height="25"
+                Margin="0,0,10,0"
+                VerticalAlignment="Center"
+                VerticalContentAlignment="Center"/>
+            
+            <Button 
+                Width="120"
+                Height="25"
+                Content="Выполнить" 
+                Margin="0,0,10,0"
+                VerticalAlignment="Center" 
+                Click="Button_Click" 
+                />
+        </StackPanel>
+    </Grid>
+</Window>
